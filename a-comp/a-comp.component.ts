@@ -13,7 +13,8 @@ export class ACompComponent implements OnInit {
   constructor (
     private aServ: AServService
   ) {
-    // this.aServ.BSAsObservable().subscribe( x => this.dataFromAService = x );
+    // this.aServ.BSAsObservable().subscribe( x => this.dataFromAService = x ); // errors
+    // can be used in the constructor, but code should be this.aServ.BSAsObservable and NOT this.aServ.BSAsObservable()
   }
 
   ngOnInit() {
