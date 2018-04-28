@@ -19,6 +19,10 @@ export class ACompComponent implements OnInit {
   ngOnInit() {
     this.aServ.BSAsObservable.subscribe( x => this.dataFromAService = x );
 
+    // VIMP: GOTCHA#5.2 in myreadme.txt
+    // ONLY aComp will be updated ; bComp and cComp will display "Are you there???"
+    // always use .next() in the service itself (if u want all subscribers to be updated)
+    
     setTimeout(() => {
     this.aServ.behaviorSubject.next('Are you there???');
     }, 6000);
