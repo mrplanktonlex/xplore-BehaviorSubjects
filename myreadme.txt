@@ -46,4 +46,4 @@ GOTCHA#5.2: but if you do write in any component, say aComp, like so:-
         this.aServ.behaviorSubject.next('Are you there???');
         }, 6000);
     }
-    , then ONLY aComp will be updated ; bComp and cComp will display "goodbye world"
+    , then ONLY aComp will be updated ; bComp and cComp will display "Are you there???"
